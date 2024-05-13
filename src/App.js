@@ -28,7 +28,6 @@ const[result, setResult]=useState(null);
 
 //유저의 선택에 따라 게임 진행하는 함수
 const play = (userChoice)=>{
-  console.log('선택됨', userChoice);
   //사용자의 선택을 상태로 저장
   setUserSelect(choice[userChoice]);
   let computerChoice = randomChoice();
@@ -45,7 +44,6 @@ const play = (userChoice)=>{
 
   //승패를 판단하는 함수]
   const judgement = (user, computer)=>{
-    console.log('user', user, 'computer', computer)
 
   if(user.name ===computer.name){
     return "tie"//무승부
@@ -60,7 +58,7 @@ const play = (userChoice)=>{
 
   return (
     <div className="App">
-      <h1 style={{textAlign:'center'}}>🎮ROCKPAPERSCISSOR GAME🎮</h1>
+      <h1 style={{textAlign:'center'}}>🎮ROCKPAPERSCISSORS GAME🎮</h1>
       <div className="Box-wrap">
         <Box title='Me' item={userSelect} result={result}/>
         <Box title='Computer' item={computerSelect} result={result}/>
